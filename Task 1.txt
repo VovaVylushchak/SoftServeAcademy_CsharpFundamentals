@@ -1,0 +1,26 @@
+using System;
+/*
+Define integer variable a (side of the square).
+Read value from the console
+Calculate the area and perimeter of a square with length a.
+Output results on the console.
+*/
+
+
+namespace CsharpFundamentals_HW1_Task1
+{
+    class Program
+    {
+        static void Main( string[] args )
+        {
+            const int NUM_SIDES_OF_SQUARE = 4;
+            int squareSide, squarePerimeter, squareArea;
+            Console.Write( "Enter side of the square = " );
+            squareSide = Convert.ToInt32(Console.ReadLine());
+            squarePerimeter = NUM_SIDES_OF_SQUARE * squareSide;
+            squareArea = squareSide * squareSide;
+            Console.WriteLine("Perimetr of a square with length {0} = {1}", squareSide, squarePerimeter);
+            Console.WriteLine("Area of a square with length {0} = {1}", squareSide, squareArea);
+        }
+    }
+}
