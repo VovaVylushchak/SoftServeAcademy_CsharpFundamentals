@@ -1,0 +1,23 @@
+using System;
+/*
+Read double number r (radius of a circle).
+Calculate the length (l=2*pi*r), area (S=pi*r*r), and volume (4/3*pi*r*r*r) of a circle
+*/
+
+namespace CsharpFundamentals_HW1_Task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double CONSTANT_FOR_CALCULATIONS_CIRCLE_LENGTH = 2.0;
+            double CONSTANT_FOR_CALCULATIONS_SPHERE_VOLUME = 4.0 / 3.0;
+            double radius, circleLength, circleArea, sphereVolume;
+            Console.Write("Enter radius of a circle = ");
+            radius = Convert.ToDouble(Console.ReadLine());
+            circleLength = CONSTANT_FOR_CALCULATIONS_CIRCLE_LENGTH * Math.PI * radius;
+            circleArea = Math.PI * radius * radius;
+            sphereVolume = CONSTANT_FOR_CALCULATIONS_SPHERE_VOLUME * Math.PI * radius * radius * radius;
+        }
+    }
+}
