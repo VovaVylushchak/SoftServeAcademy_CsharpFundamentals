@@ -1,0 +1,72 @@
+using System;
+/*
+Read number of HTTP Error (400, 401,402, ...) and write the name of this error
+(Declare enum HTTPError)
+*/
+
+
+namespace CsharpFundamentals_HW2_Task2
+{
+    class Program
+    {
+        enum HTTPError
+        {
+            Bad_Request = 400,
+            Unauthorized,
+            Payment_Required,
+            Forbidden,
+            Not_Found,
+            Method_Not_Allowed,
+            Not_Acceptable,
+            Proxy_Authentication_Required,
+            Request_Timeout,
+            Conflict,
+            Gone,
+            Length_Required,
+            Precondition_Failed,
+            Payload_Too_Large,
+            URI_Too_Long,
+            Unsupported_Media_Type,
+            Range_Not_Satisfiable,
+            Expectation_Failed,
+            Im_a_teapot,
+            Misdirected_Request = 421,
+            Unprocessable_Content,
+            Locked,
+            Failed_Dependency,
+            Too_Early,
+            Upgrade_Required,
+            Precondition_Required = 428,
+            Too_Many_Requests,
+            Request_Header_Fields_Too_Large = 431,
+            Unavailable_For_Legal_Reasons = 451,
+
+            Internal_Server_Error = 500,
+            Not_Implemented,
+            Bad_Gateway,
+            Service_Unavailable,
+            Gateway_Timeout,
+            HTTP_Version_Not_Supported,
+            Variant_Also_Negotiates,
+            Insufficient_storage,
+            Loop_Detected,
+            Not_Extended = 510,
+            Network_Authentitication_Required
+        }
+
+        static void Main(string[] args)
+        {
+            int numberHTTTPError;
+            HTTPError nameHTTTPError;
+
+            Console.Write("Enter the number of HTTP Error: ");
+            numberHTTTPError = Convert.ToInt32(Console.ReadLine());
+
+            nameHTTTPError = (HTTPError)numberHTTTPError;
+
+            Console.WriteLine("HTTP Error number {0} is called a {1}", numberHTTTPError, nameHTTTPError);
+
+            Console.ReadLine();
+        }
+    }
+}
