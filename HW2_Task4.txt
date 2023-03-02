@@ -1,0 +1,43 @@
+using System;
+/*
+Declare struct Dog with fields name, mark, age.
+Declare object myDog of Dog type and read values for it.
+Output information on the console. 
+(Override method ToString in struct)
+*/
+
+
+namespace CsharpFundamentals_HW2_Task4
+{
+    struct Dog
+    {
+        public string name;
+        public int age;
+        public int mark;
+       
+        public override string ToString()
+        {
+            return String.Format("The dog name is {0}, age is {1}, mark number is {2}", name, age, mark);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dog MyDog;
+
+            Console.Write("Enter the dog name: ");
+            MyDog.name = Console.ReadLine();
+
+            Console.Write("Enter the dog age: ");
+            MyDog.age = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the dog mark: ");
+            MyDog.mark = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(MyDog);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,28 @@
+using System;
+/*
+Read 3 float numbers and check if they are all in the range [-5.5].
+*/
+
+
+namespace CsharpFundamentals_HW2_Task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float leftEndRange = -5, rightEndRange = 5;
+            bool checkNumbersInSegment;
+            float number1, number2, number3;
+            Console.Write("Enter the first float number: ");
+            number1 = float.Parse(Console.ReadLine());
+            Console.Write("Enter the second float number: ");
+            number2 = float.Parse(Console.ReadLine());
+            Console.Write("Enter the third float number: ");
+            number3 = float.Parse(Console.ReadLine());
+            checkNumbersInSegment = leftEndRange <= number1 && number1 <= rightEndRange &&
+                             leftEndRange <= number2 && number2 <= rightEndRange &&
+                             leftEndRange <= number3 && number3 <= rightEndRange;
+            Console.ReadLine();
+        }
+    }
+}
