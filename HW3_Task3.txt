@@ -1,0 +1,37 @@
+using System;
+/*
+Enter 10 integer numbers. 
+Calculate the sum of first 5 elements if they are positive 
+or product of last 5 element in  the other case.
+*/
+
+
+namespace CsharpFundamentals_HW3_Task3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] integers = new int[10];
+            int numberElementsInintegers = 10;
+            int numberLastElementInFirstPartOfintegers = 5;
+
+            int sumOfFirstPartOfintegers = 0;
+            int prodOfSecondPartOfintegers = 1;
+            int taskAnswer;
+
+            Console.WriteLine("Enter {0} integers numbers separated by Enter: ", numberElementsInintegers);
+
+            for (int i = 0; i < numberElementsInintegers; i++)
+                integers[i] = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < numberLastElementInFirstPartOfintegers; i++)
+                sumOfFirstPartOfintegers += integers[i];
+
+            for(int i = numberLastElementInFirstPartOfintegers; i< numberElementsInintegers; i++)
+                prodOfSecondPartOfintegers *= integers[i];
+
+            taskAnswer = sumOfFirstPartOfintegers > 0 ? sumOfFirstPartOfintegers : prodOfSecondPartOfintegers;
+        }
+    }
+}
