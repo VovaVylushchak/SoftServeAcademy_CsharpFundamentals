@@ -1,0 +1,33 @@
+using System;
+/*
+Read some string str.
+Calculate the counts of characters ‘a’, ’o’, ’i’, ’e’  in this text.
+*/
+
+namespace CsharpFundamentals_HW3_Task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str;
+            char[] necessaryCharsInstr = { 'a', 'o', 'i', 'e' };
+            int numberOfNecessaryCharsInstr = 0;
+
+            str = Console.ReadLine();
+
+            foreach(char iChar in str)
+            {
+                foreach(char jChar in necessaryCharsInstr)
+                {
+                    if(iChar == jChar)
+                    {
+                        numberOfNecessaryCharsInstr++;
+                        continue;
+                    }
+                }
+            }
+
+        }
+    }
+}

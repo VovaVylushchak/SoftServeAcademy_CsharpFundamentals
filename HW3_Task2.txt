@@ -1,0 +1,42 @@
+using System;
+/*
+Ask user to enter the number of month. 
+Read value count of days in this month
+Output the count of days in this month.
+*/
+
+
+namespace CsharpFundamentals_HW3_Task2
+{
+    class Program
+    {
+        enum NamesForOrdinalNumberTo12
+        {
+            first =1,
+            second,
+            third,
+            fourth,
+            fifth,
+            sixth,
+            seventh,
+            eighth,
+            ninth,
+            tenth,
+            eleventh,
+            twelfth
+        }
+
+        static void Main(string[] args)
+        {
+            int[] numberDaysInMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            int monthNumber;
+
+            Console.Write("Enter the number of month: ");
+
+            monthNumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Number of days in the {0} month of year = {1}", (NamesForOrdinalNumberTo12)monthNumber, numberDaysInMonth[monthNumber]);
+
+        }
+    }
+}
